@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+
+main{
+    font-family: Arial, Verdana, sans-serif;
+    color: beige;
+    font-size: 10pt;
+    margin: auto;
+    width: 90%;
+    max-width: 900px;
+}
+
+h1{
+    font-family: Garamond;
+    letter-spacing: 2pt;
+    text-align: center;
+    padding-top: 12px;
+}
+
+header{
+    background-color: #00bfff;
+    height: 100px;
+    border: 3px solid #0088cc;
+    border-radius: 5px;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    border: 3px solid #0088cc;
+    background-color: #0088cc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+h2{
+    padding-left: 5px;
+}
+
+nav a{
+    text-decoration: none;
+    color: beige;
+}
+
+img{
+    border: 2px solid #0088cc;
+    border-radius: 5px;
+    margin-right: 2%;
+}
+
+article{
+    border: 2px solid #0088cc;
+    background-color: #00bfff;
+    border-radius: 5px;
+    color: black;
+}
+
+nav a:hover{
+    background-color: #00bfff;
+    padding: 5px;
+}
+
+footer{
+    border: 2px solid #0088cc;
+    background-color: #00bfff;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.megismeresukkepesszoveg{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+header{
+    grid-area: h;
+}
+
+nav{
+    grid-area: n;
+}
+
+aside{
+    grid-area: as;
+}
+
+article{
+    grid-area: ar;
+}
+
+footer{
+    grid-area: f;
+    margin-top: 1.5%;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+    "h h"
+    "n n"
+    "as ar"
+    "f f";
+}
+
+@media screen and (max-width: 500px) {
+    main{
+        grid-template-areas:
+        "h"
+        "n"
+        "ar"
+        "as"
+        "f";
+    }
+    nav ul{
+        grid-template-columns: 1fr;
+    }
+}
